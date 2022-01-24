@@ -2,21 +2,24 @@
     <form @submit.prevent class="form">
             <!-- @submit.prevent чтобы не обновлялась стр -->
             <h4>Создание поста</h4>
-            <input 
-            v-model="post.title"
-            class="input" 
+            <my-input 
+            v-model="post.title" 
             type="text" 
             placeholder="Название"
             >
-            <!-- @input="title=$event.target.value" cвязывание вписанного текста с переменной  -->
-            <input 
+            </my-input>
+
+            <my-input 
             v-model="post.body"
-            class="input" 
             type="text" 
             placeholder="Описание"
-            >
-            <button @click="createPost">Создать</button>
-        </form>
+            >         
+            </my-input>
+            <my-button class="form_btn" @click="createPost">Создать</my-button>
+        </form>  
+        
+        
+        <!-- @input="title=$event.target.value" cвязывание вписанного текста с переменной  -->
 </template>
 
 <script>
@@ -49,19 +52,10 @@ export default{
     flex-direction: column;
     justify-content: space-around;
 }
-.form button{
-    margin-top: 15px;
+
+.form .form_btn{
     align-self: flex-end;
-    padding: 10px 15px;
-    background: none;
-    color: teal;
-    border: 1px solid teal;  
+    margin-top: 15px;
 }
 
-.input{
-    width: 100%;
-    padding: 10px 15px;
-    border: 2px solid teal;
-    margin-top: 15px;
-}
 </style>
