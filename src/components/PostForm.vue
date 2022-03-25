@@ -15,7 +15,7 @@
             placeholder="Описание"
             >         
             </my-input>
-            <my-button class="form_btn" @click="createPost">Создать</my-button>
+            <my-button class="form_btn" @click="createPost">Создать пост</my-button>
         </form>  
         
         
